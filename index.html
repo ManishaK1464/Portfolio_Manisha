@@ -6,77 +6,279 @@
 <title>Manisha Kasireddy — Data &amp; AI Engineer / RL &amp; Robotics Research</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav class="site-nav">
   <div class="wrap">
-    <a class="brand" href="index.html">
-      <svg class="mark" viewBox="0 0 40 20" aria-hidden="true"><path d="M20,10 C16,2 4,2 4,10 C4,18 16,18 20,10 C24,2 36,2 36,10 C36,18 24,18 20,10 Z"/></svg>
+    <a class="brand" href="#top">
+      <span class="mark">MK</span>
       Manisha Kasireddy
     </a>
     <div class="nav-links">
-      <a href="index.html" class="active">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
+      <a href="#about">About</a>
+      <a href="#work">Projects</a>
+      <a href="#process">Process</a>
+      <a href="#expertise">Expertise</a>
     </div>
+    <a class="nav-cta" href="#contact">Let's Connect →</a>
   </div>
 </nav>
 
 <div class="wrap">
 
-  <header class="hero">
+  <header class="hero" id="top">
     <div class="hero-grid">
       <div>
-        <p class="eyebrow">Paderborn, Germany — Data &amp; AI Engineer / M.Sc. Electrical Systems Engineering</p>
+        <span class="pill">HELLO, I'M</span>
         <h1 class="name">Manisha Kasireddy</h1>
-        <p class="tagline">
-          Three years building Azure data platforms, now researching LLM-driven reinforcement learning for drone navigation at Universität Paderborn. I work at the join of data engineering, RL, and embedded systems.
+        <p class="tagline" style="font-family:var(--font-display); font-weight:700; font-size:1.3rem; color:var(--ink); margin:6px 0 18px;">
+          <span class="accent-word">Data &amp; AI Engineer</span> &amp; Graduate Researcher
         </p>
+        <p class="tagline">
+          I build data platforms and reinforcement learning systems — from three years of Azure pipelines at Capgemini to LLM-guided reward design for autonomous drones at Universität Paderborn.
+        </p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="#work">View My Work →</a>
+          <a class="btn btn-outline" href="Manisha_Kasireddy_Resume.pdf">Download CV ⬇</a>
+        </div>
+        <div class="stats-row">
+          <div class="stat"><span class="num">3+</span><br><span class="label">Years Data Engineering</span></div>
+          <div class="stat"><span class="num">2</span><br><span class="label">Research Projects</span></div>
+          <div class="stat"><span class="num">2</span><br><span class="label">Microsoft Certifications</span></div>
+        </div>
       </div>
-      <div class="portrait-wrap">
-        <img id="portrait-img" src="photo.jpg" alt="Manisha Kasireddy">
+
+      <div class="portrait-col">
+        <div class="portrait-wrap">
+          <img id="portrait-img" src="profile.png" alt="Manisha Kasireddy">
+        </div>
+        <div class="float-card fc-1">
+          <span class="fc-title">LRS-Nav</span>
+          <span class="fc-sub">RL research · RAT Lab</span>
+        </div>
+        <div class="float-card fc-2">
+          <span class="fc-title">DP-203 Certified</span>
+          <span class="fc-sub">Azure Data Engineer</span>
+        </div>
       </div>
     </div>
-
-    <svg class="lemniscate" viewBox="0 0 400 200" aria-hidden="true">
-      <path d="M200,100 C160,40 40,40 40,100 C40,160 160,160 200,100 C240,40 360,40 360,100 C360,160 240,160 200,100 Z"/>
-    </svg>
   </header>
 
-  <div class="highlight-strip reveal">
-    <div class="highlight">
-      <span class="num">01</span>
-      <span class="label">3 yrs Azure data engineering at Capgemini</span>
+  <section id="about" class="reveal">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">About</span>
+        <h2>From data platforms to drone research</h2>
+      </div>
     </div>
-    <div class="highlight">
-      <span class="num">02</span>
-      <span class="label">RL research on drone navigation, RAT Lab</span>
-    </div>
-    <div class="highlight">
-      <span class="num">03</span>
-      <span class="label">Photonic ML — diffractive neural network</span>
-    </div>
-    <div class="highlight">
-      <span class="num">04</span>
-      <span class="label">Microsoft certified: DP-203, AZ-900</span>
-    </div>
-  </div>
+    <p style="max-width:70ch; color:var(--muted); font-size:1.02rem;">
+      I'm a graduate student in Electrical Systems Engineering at Universität Paderborn, focused on machine learning, reinforcement learning, and photonic computing. I currently research LLM-driven reinforcement learning for autonomous drone navigation at the RAT Lab, and tutor for the Electromagnetic Waves and Waveguides course under Prof. Dr. J. Förstner.
+    </p>
+    <p style="max-width:70ch; color:var(--muted); font-size:1.02rem;">
+      Before returning to research, I spent three years as an Azure Data Engineer at Capgemini building enterprise cloud data platforms, and eighteen months as a working student at dSPACE GmbH in software testing and analytics for automotive and aerospace embedded systems.
+    </p>
+  </section>
 
-  <section class="reveal">
-    <h2 class="section-title"><span>→</span> Currently</h2>
-    <div class="about">
-      <p>
-        I'm completing an M.Sc. in Electrical Systems Engineering at Universität Paderborn, researching LLM-driven reinforcement learning for autonomous drone navigation at the RAT Lab, and tutoring for the Electromagnetic Waves and Waveguides course. Before this, I spent three years as an Azure Data Engineer at Capgemini and eighteen months at dSPACE GmbH in software testing and analytics.
-      </p>
-      <p>
-        <a href="about.html">More about my background →</a> &nbsp;·&nbsp;
-        <a href="projects.html">See my projects &amp; experience →</a> &nbsp;·&nbsp;
-        <a href="contact.html">Get in touch →</a>
-      </p>
+  <section id="work" class="reveal">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Featured Research</span>
+        <h2>Selected Projects</h2>
+      </div>
+    </div>
+    <div class="project-grid">
+
+      <div class="project-card">
+        <div class="thumb thumb-a">
+          <svg viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M100,50 C80,20 20,20 20,50 C20,80 80,80 100,50 C120,20 180,20 180,50 C180,80 120,80 100,50 Z" stroke="#5B4FE8" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="project-body">
+          <h3>LRS-Nav</h3>
+          <span class="meta">RAT Lab · since April 2026</span>
+          <p>LLM-guided reward generation for autonomous drone navigation.</p>
+          <ul>
+            <li>LangGraph multi-agent pipeline (Planner → Coder → Reviewer → Tester → Critic) generating IsaacLab reward functions, validated via PPO.</li>
+            <li>Qwen3 4B served with vLLM; AST-based code injection and TensorBoard metric extraction close the loop.</li>
+          </ul>
+          <div class="tag-row">
+            <span class="tag">Reinforcement Learning</span>
+            <span class="tag">LangGraph</span>
+            <span class="tag">IsaacLab</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="thumb thumb-b">
+          <svg viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10,50 L60,50 M60,50 L90,20 M60,50 L90,80 M90,20 L140,20 M90,80 L140,80 M140,20 L190,50 M140,80 L190,50" stroke="#17A398" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="project-body">
+          <h3>Diffractive Deep Neural Network (D²NN)</h3>
+          <span class="meta">Universität Paderborn · Oct 2025 – Mar 2026</span>
+          <p>All-optical MNIST classifier using photonic phase-mask layers.</p>
+          <ul>
+            <li>Trainable phase-mask layers with Rayleigh–Sommerfeld propagation, ~79% validation accuracy.</li>
+            <li>Two-mask design improved accuracy by 11.7% at 1.52× training cost.</li>
+          </ul>
+          <div class="tag-row">
+            <span class="tag">TensorFlow / Keras</span>
+            <span class="tag">Photonic Computing</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="services" class="reveal">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">What I Do</span>
+        <h2>Where I Add Value</h2>
+      </div>
+    </div>
+    <div class="service-grid">
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg>
+        </div>
+        <h3>Data Engineering</h3>
+        <p>Azure Data Factory, Databricks, and ETL/ELT pipelines at enterprise scale.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="5" cy="6" r="2.4"/><circle cx="19" cy="6" r="2.4"/><circle cx="12" cy="18" r="2.4"/><path d="M7 7.5L10.5 16 M17 7.5L13.5 16 M7.4 6h9.2"/></svg>
+        </div>
+        <h3>RL Research</h3>
+        <p>LLM-guided reward design and multi-agent pipelines for robotics.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <h3>Test Automation</h3>
+        <p>C#/NUnit/WPF regression suites and analytics dashboards for embedded systems.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6l9-3 9 3-9 3-9-3z"/><path d="M6 8v6c0 1.5 2.7 3 6 3s6-1.5 6-3V8"/></svg>
+        </div>
+        <h3>Teaching</h3>
+        <p>Tutoring and grading for the Electromagnetic Waves and Waveguides course.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="process" class="reveal">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">My Process</span>
+        <h2>How I Approach Reward Design</h2>
+      </div>
+    </div>
+    <div class="process-row">
+      <div class="process-step">
+        <div class="process-num">01</div>
+        <h3>Planner</h3>
+        <p>Break down the navigation task into a reward-shaping strategy.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">02</div>
+        <h3>Coder</h3>
+        <p>Generate the reward function implementation.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">03</div>
+        <h3>Reviewer</h3>
+        <p>Check the code for correctness before it runs.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">04</div>
+        <h3>Tester</h3>
+        <p>Validate through PPO training runs in IsaacLab.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">05</div>
+        <h3>Critic</h3>
+        <p>Evaluate results and feed learnings back into the next iteration.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="expertise" class="reveal">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Tools &amp; Skills</span>
+        <h2>My Expertise</h2>
+      </div>
+    </div>
+    <div class="expertise-grid">
+      <div>
+        <div class="skill-group">
+          <span class="label">Programming</span>
+          <div class="tag-row">
+            <span class="tag">Python</span><span class="tag">C#</span><span class="tag">Scala</span>
+            <span class="tag">T-SQL</span><span class="tag">C++</span><span class="tag">MATLAB</span><span class="tag">Bash</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <span class="label">Data &amp; Cloud</span>
+          <div class="tag-row">
+            <span class="tag">Azure Data Factory</span><span class="tag">Databricks</span><span class="tag">PySpark</span>
+            <span class="tag">Power BI</span><span class="tag">Azure DevOps</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <span class="label">AI / ML</span>
+          <div class="tag-row">
+            <span class="tag">PyTorch</span><span class="tag">TensorFlow</span><span class="tag">LangGraph</span>
+            <span class="tag">LoRA / DPO</span><span class="tag">PPO / DQN</span><span class="tag">NVIDIA Isaac Lab</span><span class="tag">vLLM</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <span class="label" style="font-family:var(--font-display); font-size:0.82rem; font-weight:700; color:var(--ink); text-transform:uppercase; letter-spacing:0.04em; margin-bottom:12px; display:block;">Core Tools</span>
+        <div class="tool-grid">
+          <div class="tool-tile"><div class="tool-glyph">Az</div><div class="tool-name">Azure</div></div>
+          <div class="tool-tile"><div class="tool-glyph">DB</div><div class="tool-name">Databricks</div></div>
+          <div class="tool-tile"><div class="tool-glyph">Py</div><div class="tool-name">Python</div></div>
+          <div class="tool-tile"><div class="tool-glyph">PT</div><div class="tool-name">PyTorch</div></div>
+          <div class="tool-tile"><div class="tool-glyph">TF</div><div class="tool-name">TensorFlow</div></div>
+          <div class="tool-tile"><div class="tool-glyph">IL</div><div class="tool-name">IsaacLab</div></div>
+          <div class="tool-tile"><div class="tool-glyph">C#</div><div class="tool-name">C# / NUnit</div></div>
+          <div class="tool-tile"><div class="tool-glyph">Git</div><div class="tool-name">Git</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="reveal">
+    <div class="cta-panel">
+      <div>
+        <span class="eyebrow">Let's Work Together</span>
+        <h2>Open to New Opportunities</h2>
+        <p>Open to conversations about data engineering, reinforcement learning, or robotics research roles.</p>
+        <a class="cta-btn" href="mailto:manishakasireddy98@gmail.com">Email Me →</a>
+      </div>
+      <div class="cta-list">
+        <a href="mailto:manishakasireddy98@gmail.com">✉ manishakasireddy98@gmail.com</a>
+        <a href="https://github.com/ManishaK1464">⌘ github.com/ManishaK1464</a>
+        <a href="https://www.linkedin.com/in/manisha-kasireddy/">in linkedin.com/in/manisha-kasireddy</a>
+        <span>📍 Paderborn, Germany</span>
+      </div>
     </div>
   </section>
 
@@ -84,7 +286,16 @@
 
 <footer class="site-footer">
   <div class="wrap">
-    Manisha Kasireddy · Paderborn, Germany
+    <div class="footer-grid">
+      <span class="footer-brand">Manisha Kasireddy</span>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#work">Projects</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="footer-copy">© 2026 Manisha Kasireddy. Built with HTML, CSS &amp; JavaScript.</div>
   </div>
 </footer>
 
