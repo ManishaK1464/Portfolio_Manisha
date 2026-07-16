@@ -17,17 +17,27 @@ document.addEventListener('DOMContentLoaded', () => {
     reveals.forEach(el => observer.observe(el));
   }
 
-  // Portrait photo fallback: show initials if photo.jpg hasn't been added yet
+  // Portrait photo: try common filename/extension variants before falling back to initials
   const portraitImg = document.getElementById('portrait-img');
   if (portraitImg) {
+    const candidates = [
+      'profile.jpeg', 'profile.jpg', 'profile.JPG', 'profile.JPEG',
+      'profile.png', 'profile.PNG', 'Profile.jpeg', 'Profile.jpg', 'Profile.png'
+    ];
     portraitImg.addEventListener('error', () => {
-      portraitImg.style.display = 'none';
-      const wrap = portraitImg.closest('.portrait-wrap');
-      if (wrap && !wrap.querySelector('.initials')) {
-        const div = document.createElement('div');
-        div.className = 'initials';
-        div.textContent = 'MK';
-        wrap.appendChild(div);
+      const tried = parseInt(portraitImg.dataset.tried || '0', 10) + 1;
+      if (tried < candidates.length) {
+        portraitImg.dataset.tried = tried;
+        portraitImg.src = candidates[tried];
+      } else {
+        portraitImg.style.display = 'none';
+        const wrap = portraitImg.closest('.portrait-wrap');
+        if (wrap && !wrap.querySelector('.initials')) {
+          const div = document.createElement('div');
+          div.className = 'initials';
+          div.textContent = 'MK';
+          wrap.appendChild(div);
+        }
       }
     });
   }
