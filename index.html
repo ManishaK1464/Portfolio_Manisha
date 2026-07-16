@@ -6,472 +6,88 @@
 <title>Manisha Kasireddy — Data &amp; AI Engineer / RL &amp; Robotics Research</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg: #10141A;
-    --panel: #1A2029;
-    --border: #2A323D;
-    --text: #EDEFF2;
-    --muted: #8B94A3;
-    --accent: #4FD1C5;
-    --accent-dim: #33807A;
-    --warn: #E8A33D;
-
-    --font-display: 'Space Grotesk', sans-serif;
-    --font-body: 'IBM Plex Sans', sans-serif;
-    --font-mono: 'IBM Plex Mono', monospace;
-  }
-
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-
-  body{
-    margin:0;
-    background:
-      linear-gradient(var(--border) 1px, transparent 1px) 0 0/100% 44px,
-      var(--bg);
-    color:var(--text);
-    font-family:var(--font-body);
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-  }
-
-  a{color:var(--accent); text-decoration:none;}
-  a:hover{text-decoration:underline;}
-
-  :focus-visible{
-    outline:2px solid var(--accent);
-    outline-offset:3px;
-  }
-
-  .wrap{
-    max-width:840px;
-    margin:0 auto;
-    padding:0 28px;
-  }
-
-  .eyebrow{
-    font-family:var(--font-mono);
-    font-size:0.78rem;
-    letter-spacing:0.12em;
-    text-transform:uppercase;
-    color:var(--accent);
-  }
-
-  /* ---------- HERO ---------- */
-  header.hero{
-    padding:120px 0 60px;
-    position:relative;
-  }
-
-  h1.name{
-    font-family:var(--font-display);
-    font-weight:700;
-    font-size:clamp(2.6rem, 7vw, 4.4rem);
-    margin:14px 0 18px;
-    letter-spacing:-0.02em;
-  }
-
-  p.tagline{
-    font-size:1.15rem;
-    color:var(--muted);
-    max-width:58ch;
-    margin:0 0 44px;
-  }
-
-  .lemniscate{
-    width:100%;
-    max-width:420px;
-    height:auto;
-    display:block;
-    margin:0 0 8px -6px;
-  }
-
-  .lemniscate path{
-    fill:none;
-    stroke:var(--accent);
-    stroke-width:2.4;
-    stroke-linecap:round;
-    pathLength:1;
-    stroke-dasharray:1;
-    stroke-dashoffset:1;
-    animation:draw 2.2s ease-out forwards 0.2s;
-  }
-
-  @keyframes draw{ to{ stroke-dashoffset:0; } }
-
-  @media (prefers-reduced-motion: reduce){
-    .lemniscate path{ animation:none; stroke-dashoffset:0; }
-    html{ scroll-behavior:auto; }
-  }
-
-  /* ---------- SECTIONS ---------- */
-  section{
-    padding:56px 0;
-    border-top:1px solid var(--border);
-  }
-
-  .reveal{
-    opacity:0;
-    transform:translateY(14px);
-    transition:opacity 0.6s ease, transform 0.6s ease;
-  }
-  .reveal.in{
-    opacity:1;
-    transform:translateY(0);
-  }
-
-  h2.section-title{
-    font-family:var(--font-mono);
-    font-size:0.85rem;
-    letter-spacing:0.14em;
-    text-transform:uppercase;
-    color:var(--muted);
-    margin:0 0 28px;
-  }
-
-  h2.section-title span{ color:var(--accent); }
-
-  .about p{
-    font-size:1.05rem;
-    max-width:64ch;
-    color:var(--text);
-  }
-
-  /* card */
-  .card{
-    background:var(--panel);
-    border:1px solid var(--border);
-    border-radius:10px;
-    padding:26px 28px;
-    margin-bottom:18px;
-  }
-
-  .card h3{
-    font-family:var(--font-display);
-    font-size:1.25rem;
-    margin:0 0 6px;
-    font-weight:600;
-  }
-
-  .card .meta{
-    font-family:var(--font-mono);
-    font-size:0.82rem;
-    color:var(--accent);
-    margin-bottom:14px;
-    display:block;
-  }
-
-  .card p{ margin:0 0 10px; color:var(--muted); }
-  .card p:last-child{ margin-bottom:0; }
-  .card ul{ margin:0 0 10px; padding-left:1.1em; color:var(--muted);}
-  .card li{ margin-bottom:6px; }
-  .card li:last-child{ margin-bottom:0; }
-
-  .tag-row{
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
-    margin-top:14px;
-  }
-
-  .tag{
-    font-family:var(--font-mono);
-    font-size:0.74rem;
-    padding:4px 10px;
-    border:1px solid var(--border);
-    border-radius:100px;
-    color:var(--muted);
-  }
-
-  /* timeline for industry/teaching/education */
-  .timeline-item{
-    display:grid;
-    grid-template-columns:150px 1fr;
-    gap:20px;
-    padding:20px 0;
-    border-top:1px solid var(--border);
-  }
-  .timeline-item:first-child{ border-top:none; }
-
-  .timeline-date{
-    font-family:var(--font-mono);
-    font-size:0.8rem;
-    color:var(--muted);
-    white-space:nowrap;
-  }
-
-  .timeline-item h3{
-    font-family:var(--font-display);
-    font-size:1.1rem;
-    margin:0 0 4px;
-    font-weight:600;
-  }
-  .timeline-item .role{ color:var(--accent); font-size:0.92rem; margin-bottom:8px; display:block;}
-  .timeline-item p{ color:var(--muted); margin:0 0 6px; font-size:0.96rem;}
-  .timeline-item ul{ margin:6px 0 0; padding-left:1.1em; color:var(--muted); font-size:0.94rem;}
-  .timeline-item li{ margin-bottom:4px; }
-
-  @media (max-width:560px){
-    .timeline-item{ grid-template-columns:1fr; gap:4px; }
-  }
-
-  /* skills groups */
-  .skill-group{ margin-bottom:20px; }
-  .skill-group:last-child{ margin-bottom:0; }
-  .skill-group .label{
-    font-family:var(--font-mono);
-    font-size:0.78rem;
-    color:var(--muted);
-    text-transform:uppercase;
-    letter-spacing:0.08em;
-    margin-bottom:10px;
-    display:block;
-  }
-
-  /* ---------- CONTACT / FOOTER ---------- */
-  footer{
-    padding:60px 0 90px;
-    border-top:1px solid var(--border);
-  }
-
-  .contact-links{
-    display:flex;
-    flex-wrap:wrap;
-    gap:14px 28px;
-    margin-top:20px;
-    font-family:var(--font-mono);
-    font-size:0.95rem;
-  }
-
-  .contact-links a::before{
-    content:"→ ";
-    color:var(--accent-dim);
-  }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg class="mark" viewBox="0 0 40 20" aria-hidden="true"><path d="M20,10 C16,2 4,2 4,10 C4,18 16,18 20,10 C24,2 36,2 36,10 C36,18 24,18 20,10 Z"/></svg>
+      Manisha Kasireddy
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
 
 <div class="wrap">
 
   <header class="hero">
-    <p class="eyebrow">Paderborn, Germany — Data &amp; AI Engineer / M.Sc. Electrical Systems Engineering</p>
-    <h1 class="name">Manisha Kasireddy</h1>
-    <p class="tagline">
-      Three years building Azure data platforms, now researching LLM-driven reinforcement learning for drone navigation at Universität Paderborn. I work at the join of data engineering, RL, and embedded systems.
-    </p>
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">Paderborn, Germany — Data &amp; AI Engineer / M.Sc. Electrical Systems Engineering</p>
+        <h1 class="name">Manisha Kasireddy</h1>
+        <p class="tagline">
+          Three years building Azure data platforms, now researching LLM-driven reinforcement learning for drone navigation at Universität Paderborn. I work at the join of data engineering, RL, and embedded systems.
+        </p>
+      </div>
+      <div class="portrait-wrap">
+        <img id="portrait-img" src="photo.jpg" alt="Manisha Kasireddy">
+      </div>
+    </div>
 
     <svg class="lemniscate" viewBox="0 0 400 200" aria-hidden="true">
       <path d="M200,100 C160,40 40,40 40,100 C40,160 160,160 200,100 C240,40 360,40 360,100 C360,160 240,160 200,100 Z"/>
     </svg>
   </header>
 
-  <section id="about" class="reveal">
-    <h2 class="section-title"><span>01</span> — About</h2>
+  <div class="highlight-strip reveal">
+    <div class="highlight">
+      <span class="num">01</span>
+      <span class="label">3 yrs Azure data engineering at Capgemini</span>
+    </div>
+    <div class="highlight">
+      <span class="num">02</span>
+      <span class="label">RL research on drone navigation, RAT Lab</span>
+    </div>
+    <div class="highlight">
+      <span class="num">03</span>
+      <span class="label">Photonic ML — diffractive neural network</span>
+    </div>
+    <div class="highlight">
+      <span class="num">04</span>
+      <span class="label">Microsoft certified: DP-203, AZ-900</span>
+    </div>
+  </div>
+
+  <section class="reveal">
+    <h2 class="section-title"><span>→</span> Currently</h2>
     <div class="about">
       <p>
-        I'm a graduate student in Electrical Systems Engineering at Universität Paderborn, focused on machine learning, reinforcement learning, and photonic computing. I currently research LLM-driven reinforcement learning for autonomous drone navigation at the RAT Lab, and tutor for the Electromagnetic Waves and Waveguides course under Prof. Dr. J. Förstner.
+        I'm completing an M.Sc. in Electrical Systems Engineering at Universität Paderborn, researching LLM-driven reinforcement learning for autonomous drone navigation at the RAT Lab, and tutoring for the Electromagnetic Waves and Waveguides course. Before this, I spent three years as an Azure Data Engineer at Capgemini and eighteen months at dSPACE GmbH in software testing and analytics.
       </p>
       <p>
-        Before returning to research, I spent three years as an Azure Data Engineer at Capgemini building enterprise cloud data platforms, and eighteen months as a working student at dSPACE GmbH in software testing and analytics for automotive and aerospace embedded systems. I'm Microsoft certified in Azure Data Engineering (DP-203) and Azure Fundamentals (AZ-900).
+        <a href="about.html">More about my background →</a> &nbsp;·&nbsp;
+        <a href="projects.html">See my projects &amp; experience →</a> &nbsp;·&nbsp;
+        <a href="contact.html">Get in touch →</a>
       </p>
     </div>
   </section>
-
-  <section id="research" class="reveal">
-    <h2 class="section-title"><span>02</span> — Research Projects</h2>
-
-    <div class="card">
-      <h3>LRS-Nav: LLM-Guided Reward Generation for Autonomous Drone Navigation</h3>
-      <span class="meta">RAT Lab, Universität Paderborn · since April 2026</span>
-      <ul>
-        <li>Built a LangGraph multi-agent pipeline (Planner, Coder, Reviewer, Tester, Critic) that generates and refines quadcopter reward functions for NVIDIA Isaac Lab, validated automatically through PPO training runs.</li>
-        <li>Served a Qwen3 4B model with vLLM and implemented AST-based code injection, Gym environment registration, and TensorBoard metric extraction to close the generate–train–evaluate loop.</li>
-        <li>Fine-tuned Qwen2.5-Coder-3B with LoRA and DPO in an earlier iteration, raising reward margins from 0.4 to 6.2 and preference accuracy to 1.0 within roughly 60 training steps.</li>
-      </ul>
-      <div class="tag-row">
-        <span class="tag">Reinforcement Learning</span>
-        <span class="tag">IsaacLab</span>
-        <span class="tag">LangGraph</span>
-        <span class="tag">LoRA / DPO</span>
-        <span class="tag">PPO</span>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>Diffractive Deep Neural Network (D²NN): Photonic Machine Learning</h3>
-      <span class="meta">Universität Paderborn · Oct 2025 – Mar 2026</span>
-      <ul>
-        <li>Implemented an all-optical MNIST classifier in TensorFlow/Keras with trainable phase-mask layers and Rayleigh–Sommerfeld free-space propagation, reaching approximately 79% validation accuracy.</li>
-        <li>Benchmarked architecture variants: a two-mask design improved accuracy by 11.7% at 1.52× training cost, and a 60λ propagation distance outperformed the baseline.</li>
-      </ul>
-      <div class="tag-row">
-        <span class="tag">TensorFlow / Keras</span>
-        <span class="tag">Photonic Computing</span>
-        <span class="tag">Optics Simulation</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="experience" class="reveal">
-    <h2 class="section-title"><span>03</span> — Industry Experience</h2>
-
-    <div class="timeline-item">
-      <div class="timeline-date">Oct 2023 – Apr 2025</div>
-      <div>
-        <span class="role">Working Student, Software Testing &amp; Data Analytics</span>
-        <h3>dSPACE GmbH</h3>
-        <p>Simulation and validation solutions for automotive and aerospace embedded systems.</p>
-        <ul>
-          <li>Designed and executed automated regression and unit tests in C#, NUnit, and WPF within Visual Studio.</li>
-          <li>Owned the analytics reporting function, building test-coverage and defect-analysis dashboards that informed release decisions.</li>
-          <li>Integrated structured test results into internal BI workflows, collaborating with developers and QA in Agile sprints.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-date">Mar 2020 – Mar 2023</div>
-      <div>
-        <span class="role">Azure Data Engineer</span>
-        <h3>Capgemini</h3>
-        <p>Enterprise cloud data platforms for international clients.</p>
-        <ul>
-          <li>Designed and delivered end-to-end Azure data platforms, contributing to architecture decisions on storage layers, orchestration, and data modelling.</li>
-          <li>Developed metadata-driven ETL/ELT pipelines in Azure Data Factory and Databricks, ingesting structured and semi-structured data from REST APIs and CRM systems at scale.</li>
-          <li>Designed star/snowflake warehouse structures and tuned T-SQL via indexing, partitioning, and execution-plan analysis.</li>
-          <li>Delivered Power BI dashboards on operational KPIs, and managed CI/CD releases via Git and Azure DevOps.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-date">Jun 2018 – Aug 2018</div>
-      <div>
-        <span class="role">Summer Intern</span>
-        <h3>Bharat Heavy Electricals Limited (BHEL)</h3>
-        <p>Supported assembly, testing, and quality control of traction, excitation, and generator-control systems; hands-on exposure to semiconductor and photovoltaic manufacturing.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="teaching" class="reveal">
-    <h2 class="section-title"><span>04</span> — Teaching</h2>
-    <div class="timeline-item">
-      <div class="timeline-date">Since Mar 2026</div>
-      <div>
-        <span class="role">Research Assistant (WHK), Teaching Support</span>
-        <h3>Electromagnetic Waves and Waveguides</h3>
-        <p>Course led by Prof. Dr. J. Förstner, Universität Paderborn.</p>
-        <ul>
-          <li>Assessed weekly problem sheets against criteria-based rubrics, keeping marking consistent across the cohort.</li>
-          <li>Verified analytical derivations and MATLAB submissions independently before awarding marks.</li>
-          <li>Resolved grading queries directly with students with concise, professional written feedback.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="education" class="reveal">
-    <h2 class="section-title"><span>05</span> — Education</h2>
-
-    <div class="timeline-item">
-      <div class="timeline-date">04/2023 – Present</div>
-      <div>
-        <span class="role">M.Sc. Electrical Systems Engineering</span>
-        <h3>Universität Paderborn, Germany</h3>
-        <p>Focus: machine learning, reinforcement learning, photonic computing.</p>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-date">04/2015 – 06/2019</div>
-      <div>
-        <span class="role">B.Tech. Electronics &amp; Communication Engineering</span>
-        <h3>KIET, Kakinada, India</h3>
-        <p>Thesis: VLSI design of a fixed-width Booth multiplier with an MLCP-based truncation-error estimator.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="skills" class="reveal">
-    <h2 class="section-title"><span>06</span> — Skills &amp; Certifications</h2>
-
-    <div class="skill-group">
-      <span class="label">Programming</span>
-      <div class="tag-row">
-        <span class="tag">Python</span><span class="tag">C#</span><span class="tag">Scala</span>
-        <span class="tag">T-SQL</span><span class="tag">C++</span><span class="tag">MATLAB</span><span class="tag">Bash</span>
-      </div>
-    </div>
-
-    <div class="skill-group">
-      <span class="label">Data Engineering</span>
-      <div class="tag-row">
-        <span class="tag">Azure Data Factory</span><span class="tag">Databricks</span><span class="tag">PySpark</span>
-        <span class="tag">Spark SQL</span><span class="tag">ETL / ELT</span><span class="tag">Microsoft Fabric</span><span class="tag">Power BI</span>
-      </div>
-    </div>
-
-    <div class="skill-group">
-      <span class="label">AI / ML</span>
-      <div class="tag-row">
-        <span class="tag">PyTorch</span><span class="tag">TensorFlow / Keras</span><span class="tag">Hugging Face</span>
-        <span class="tag">LangGraph</span><span class="tag">LoRA / PEFT</span><span class="tag">DPO / GRPO</span>
-        <span class="tag">PPO / DQN</span><span class="tag">NVIDIA Isaac Lab</span><span class="tag">vLLM</span><span class="tag">FastAPI</span>
-      </div>
-    </div>
-
-    <div class="skill-group">
-      <span class="label">Cloud &amp; Infrastructure</span>
-      <div class="tag-row">
-        <span class="tag">Microsoft Azure</span><span class="tag">Azure DevOps</span><span class="tag">HPC (Noctua 2, PC2)</span>
-      </div>
-    </div>
-
-    <div class="skill-group">
-      <span class="label">Certifications</span>
-      <div class="tag-row">
-        <span class="tag">Azure Data Engineer Associate (DP-203)</span><span class="tag">Azure Fundamentals (AZ-900)</span>
-      </div>
-    </div>
-  </section>
-
-  <footer class="reveal">
-    <h2 class="section-title"><span>07</span> — Get in touch</h2>
-    <p style="color:var(--muted); max-width:56ch;">
-      Open to conversations about data engineering, RL, or robotics research roles.
-    </p>
-    <div class="contact-links">
-      <a href="mailto:manishakasireddy98@gmail.com">manishakasireddy98@gmail.com</a>
-      <a href="https://github.com/ManishaK1464">github.com/ManishaK1464</a>
-      <a href="https://www.linkedin.com/in/manisha-kasireddy/">linkedin.com/in/manisha-kasireddy</a>
-      <a href="Manisha_Kasireddy_Resume.pdf">Download CV</a>
-    </div>
-  </footer>
 
 </div>
 
-<script>
-  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const reveals = document.querySelectorAll('.reveal');
+<footer class="site-footer">
+  <div class="wrap">
+    Manisha Kasireddy · Paderborn, Germany
+  </div>
+</footer>
 
-  if (prefersReduced) {
-    reveals.forEach(el => el.classList.add('in'));
-  } else {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
-
-    reveals.forEach(el => observer.observe(el));
-  }
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>

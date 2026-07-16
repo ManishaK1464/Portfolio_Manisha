@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects &amp; Experience — Manisha Kasireddy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg class="mark" viewBox="0 0 40 20" aria-hidden="true"><path d="M20,10 C16,2 4,2 4,10 C4,18 16,18 20,10 C24,2 36,2 36,10 C36,18 24,18 20,10 Z"/></svg>
+      Manisha Kasireddy
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <div class="page-header reveal">
+    <p class="eyebrow">Projects &amp; Experience</p>
+    <h1>Research, and the industry work before it</h1>
+    <p>Reinforcement learning and photonic ML research at Universität Paderborn, built on a foundation of data engineering and embedded test automation.</p>
+  </div>
+
+  <section class="reveal">
+    <h2 class="section-title"><span>01</span> — Research projects</h2>
+
+    <div class="card">
+      <h3>LRS-Nav: LLM-Guided Reward Generation for Autonomous Drone Navigation</h3>
+      <span class="meta">RAT Lab, Universität Paderborn · since April 2026</span>
+      <ul>
+        <li>Built a LangGraph multi-agent pipeline (Planner, Coder, Reviewer, Tester, Critic) that generates and refines quadcopter reward functions for NVIDIA Isaac Lab, validated automatically through PPO training runs.</li>
+        <li>Served a Qwen3 4B model with vLLM and implemented AST-based code injection, Gym environment registration, and TensorBoard metric extraction to close the generate–train–evaluate loop.</li>
+        <li>Fine-tuned Qwen2.5-Coder-3B with LoRA and DPO in an earlier iteration, raising reward margins from 0.4 to 6.2 and preference accuracy to 1.0 within roughly 60 training steps.</li>
+      </ul>
+      <div class="tag-row">
+        <span class="tag">Reinforcement Learning</span>
+        <span class="tag">IsaacLab</span>
+        <span class="tag">LangGraph</span>
+        <span class="tag">LoRA / DPO</span>
+        <span class="tag">PPO</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Diffractive Deep Neural Network (D²NN): Photonic Machine Learning</h3>
+      <span class="meta">Universität Paderborn · Oct 2025 – Mar 2026</span>
+      <ul>
+        <li>Implemented an all-optical MNIST classifier in TensorFlow/Keras with trainable phase-mask layers and Rayleigh–Sommerfeld free-space propagation, reaching approximately 79% validation accuracy.</li>
+        <li>Benchmarked architecture variants: a two-mask design improved accuracy by 11.7% at 1.52× training cost, and a 60λ propagation distance outperformed the baseline.</li>
+      </ul>
+      <div class="tag-row">
+        <span class="tag">TensorFlow / Keras</span>
+        <span class="tag">Photonic Computing</span>
+        <span class="tag">Optics Simulation</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <h2 class="section-title"><span>02</span> — Industry experience</h2>
+
+    <div class="timeline-item">
+      <div class="timeline-date">Oct 2023 – Apr 2025</div>
+      <div>
+        <span class="role">Working Student, Software Testing &amp; Data Analytics</span>
+        <h3>dSPACE GmbH</h3>
+        <p>Simulation and validation solutions for automotive and aerospace embedded systems.</p>
+        <ul>
+          <li>Designed and executed automated regression and unit tests in C#, NUnit, and WPF within Visual Studio.</li>
+          <li>Owned the analytics reporting function, building test-coverage and defect-analysis dashboards that informed release decisions.</li>
+          <li>Integrated structured test results into internal BI workflows, collaborating with developers and QA in Agile sprints.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">Mar 2020 – Mar 2023</div>
+      <div>
+        <span class="role">Azure Data Engineer</span>
+        <h3>Capgemini</h3>
+        <p>Enterprise cloud data platforms for international clients.</p>
+        <ul>
+          <li>Designed and delivered end-to-end Azure data platforms, contributing to architecture decisions on storage layers, orchestration, and data modelling.</li>
+          <li>Developed metadata-driven ETL/ELT pipelines in Azure Data Factory and Databricks, ingesting structured and semi-structured data from REST APIs and CRM systems at scale.</li>
+          <li>Designed star/snowflake warehouse structures and tuned T-SQL via indexing, partitioning, and execution-plan analysis.</li>
+          <li>Delivered Power BI dashboards on operational KPIs, and managed CI/CD releases via Git and Azure DevOps.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">Jun 2018 – Aug 2018</div>
+      <div>
+        <span class="role">Summer Intern</span>
+        <h3>Bharat Heavy Electricals Limited (BHEL)</h3>
+        <p>Supported assembly, testing, and quality control of traction, excitation, and generator-control systems; hands-on exposure to semiconductor and photovoltaic manufacturing.</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    Manisha Kasireddy · Paderborn, Germany
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
